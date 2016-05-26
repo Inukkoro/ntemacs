@@ -1,0 +1,28 @@
+# ユーザー毎に異なるファイル
+/recentf
+/.scratch-log*
+
+# elpaフォルダを除外
+elpa/
+
+# el-getフォルダを除外
+el-get/
+
+# fontsを除外
+#inits/999-fonts.el
+
+#projectileファイルを除外
+*.eld
+projectile.cache
+url/
+
+#org-modeファイルを除外
+bookmarks
+
+#emacs.exe.stackdumpを除外
+*.stackdump
+
+#履歴、場所を除外
+history
+places
+
