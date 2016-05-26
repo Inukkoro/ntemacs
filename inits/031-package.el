@@ -13,6 +13,9 @@
     ;git
     magit
 
+    ;theme
+    zenburn-theme
+
     ))
 
 (let ((not-installed (loop for x in installing-package-list

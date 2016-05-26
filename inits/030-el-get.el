@@ -12,10 +12,10 @@
 
 ; テーマ
 ;(el-get-bundle molokai-theme)
-(el-get-bundle zenburn-theme)
+;(el-get-bundle zenburn-theme)
 
 ; use-package
-(el-get-bundle use-package)
+(el-get-bundle! use-package)
 
 ; helm
 (el-get-bundle helm)
@@ -37,3 +37,6 @@
 ;which-key
 (el-get-bundle which-key)
 
+;major-mode
+(el-get-bundle php-mode)
+(el-get-bundle elpa:csharp-mode)
