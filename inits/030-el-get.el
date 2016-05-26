@@ -40,3 +40,4 @@
 ;major-mode
 (el-get-bundle php-mode)
 (el-get-bundle elpa:csharp-mode)
+(el-get-bundle vbnet-mode)

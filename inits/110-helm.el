@@ -3,7 +3,8 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 ;; テーマ選択
-(when (require 'helm-config nil t)
+(use-package helm-config
+  :config
   (helm-mode 1)
 
   ; helm-projectile
@@ -70,8 +71,7 @@
                         ;; '^' is a pattern for basename
                         ;; and not required because the directory name is prepended
                         (substring input-pattern 1)
-                      (concat ".*" input-pattern)))))))
-
+                      (concat ".*" input-pattern))))))
 
   (defun helm-buffers-list-pattern-transformer (pattern)
     (if (equal pattern "")
@@ -129,4 +129,4 @@
 
   (add-hook 'php-mode-hook 'helm-gtags-mode)
 
-
+)

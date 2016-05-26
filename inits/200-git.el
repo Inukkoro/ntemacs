@@ -17,8 +17,9 @@
 
 (git-gutter:linum-setup)
 
-(when (require 'smartrep nil t)
-
+;(when (require 'smartrep nil t)
+(use-package smartrep
+  :config
     (smartrep-define-key
         global-map  "C-q" '(
             ;; Jump to next/previous hunk
@@ -42,10 +43,11 @@
 ;; ------------------------------------------------------------------------
 ;; @ magit
 
-(require 'git-commit)
+;(require 'git-commit)
+(use-package git-commit)
 
 ;; Socketエラーとなるためコメント
 ;;;
 ;(require 'magit)
-
+(use-package magit)
 

@@ -1,10 +1,10 @@
 ;; ------------------------------------------------------------------------
 ;; @ package
-(require 'package)
+(use-package package)
+(use-package cl)
+
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
-
-(require 'cl)
 
 (defvar installing-package-list
   '(

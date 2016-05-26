@@ -1,6 +1,8 @@
 ;; ------------------------------------------------------------------------
 ;; @ undo-tree
 
-(when (require 'undo-tree nil t)
-  (global-undo-tree-mode))
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode)
+)
 
