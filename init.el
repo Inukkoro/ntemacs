@@ -156,7 +156,7 @@
                 (vertical-scroll-bars . 1  ) ; スクロールバー
                 (scroll-bar-width     . 17 ) ; スクロールバー幅
                 (cursor-type          . box) ; カーソル種別
-                (alpha                . 90 ) ; 透明度
+                (alpha                . 95 ) ; 透明度
                 (cursor-color         . "DarkRed") ; カーソルの色
                 ) default-frame-alist))
 (setq initial-frame-alist default-frame-alist)

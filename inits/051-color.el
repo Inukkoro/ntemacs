@@ -29,4 +29,4 @@
    (font-lock-mode t))))
 
 (custom-set-faces '(hl-line ((t (:background "gray15")))))
-
+(set-face-background 'region "dark green")

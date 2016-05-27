@@ -37,7 +37,12 @@
 ;which-key
 (el-get-bundle which-key)
 
+;recentf-ext
+(el-get-bundle recentf-ext)
+
 ;major-mode
 (el-get-bundle php-mode)
 (el-get-bundle elpa:csharp-mode)
 (el-get-bundle vbnet-mode)
+
+
