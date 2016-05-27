@@ -37,8 +37,9 @@
 ;which-key
 (el-get-bundle which-key)
 
-;recentf-ext
+;履歴など
 (el-get-bundle recentf-ext)
+(el-get-bundle session)
 
 ;major-mode
 (el-get-bundle php-mode)
