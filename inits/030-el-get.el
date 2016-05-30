@@ -46,4 +46,6 @@
 (el-get-bundle elpa:csharp-mode)
 (el-get-bundle vbnet-mode)
 
-
+;region選択
+(el-get-bundle expand-region)
+(el-get-bundle highlight-symbol)
