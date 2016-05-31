@@ -529,7 +529,10 @@
 ; yes/no を y/n で回答
 (fset 'yes-or-no-p 'y-or-n-p)
 
-
-
+;;; 押し返しをしない
+;;通常のウィンドウ用の設定
+(setq-default truncate-lines t)
+;;ウィンドウを左右に分割したとき用の設定
+(setq-default truncate-partial-width-windows t)
 
 
