@@ -1,6 +1,8 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ search - migemo                                               ;;;
 ;;;   https://github.com/emacs-jp/migemo                            ;;;
+;;;   cmigemoをインストールする必要あり                             ;;;
+;;;   http://www.kaoriya.net/software/cmigemo/                      ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 (use-package migemo
