@@ -99,7 +99,9 @@
 (setq w32-ime-mode-line-state-indicator-list '("[Aa]" "[あ]" "[Aa]"))
 
 ;; IME初期化
-(w32-ime-initialize)
+(if (eq system-type 'windows-nt) (
+  (w32-ime-initialize)
+  ))
 
 ;; デフォルトIME
 (setq default-input-method "W32-IME")
@@ -117,16 +119,20 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 ;; デフォルト フォント
-(set-face-font 'default "Myrica M-11:antialias=standard")
+;(set-face-font 'default "Myrica M-11:antialias=standard")
+(set-face-font 'default "Migu 1M-13:antialias=standard")
 
 ;; プロポーショナル フォント
-(set-face-font 'variable-pitch "Myrica M-11:antialias=standard")
+;(set-face-font 'variable-pitch "Myrica M-11:antialias=standard")
+(set-face-font 'variable-pitch "Migu 1M-13:antialias=standard")
 
 ;; 等幅フォント
-(set-face-font 'fixed-pitch "Myrica M-11:antialias=standard")
+;(set-face-font 'fixed-pitch "Myrica M-11:antialias=standard")
+(set-face-font 'fixed-pitch "Migu 1M-13:antialias=standard")
 
 ;; ツールチップ表示フォント
-(set-face-font 'tooltip "Myrica M-9:antialias=standard")
+;(set-face-font 'tooltip "Myrica M-9:antialias=standard")
+(set-face-font 'tooltip "Migu 1M-10:antialias=standard")
 
 ;;; fontset
 
@@ -246,15 +252,15 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ screen - minibuffer                                           ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; minibufferのアクティブ時、IMEを無効化
-(add-hook 'minibuffer-setup-hook
+(if (eq system-type 'windows-nt) (
+  ;; minibufferのアクティブ時、IMEを無効化
+  (add-hook 'minibuffer-setup-hook
           (lambda ()
             (deactivate-input-method)))
-(wrap-function-to-control-ime 'y-or-n-p nil nil)
-(wrap-function-to-control-ime 'map-y-or-n-p nil nil)
-(wrap-function-to-control-ime 'read-char nil nil)
-
+  (wrap-function-to-control-ime 'y-or-n-p nil nil)
+  (wrap-function-to-control-ime 'map-y-or-n-p nil nil)
+  (wrap-function-to-control-ime 'read-char nil nil)
+))
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ screen - cursor                                               ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
