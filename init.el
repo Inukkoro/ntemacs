@@ -99,9 +99,7 @@
 (setq w32-ime-mode-line-state-indicator-list '("[Aa]" "[あ]" "[Aa]"))
 
 ;; IME初期化
-(if (eq system-type 'windows-nt) (
-  (w32-ime-initialize)
-  ))
+(if (eq system-type 'windows-nt) (w32-ime-initialize))
 
 ;; デフォルトIME
 (setq default-input-method "W32-IME")
@@ -119,21 +117,31 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ; yaourt ttf-myricam
 
-;; デフォルト フォント
-(set-face-font 'default "MyricaM M-13:antialias=standard")
-;(set-face-font 'default "Migu 1M-13:antialias=standard")
+(when (eq system-type 'windows-nt) 
+  ;; デフォルト フォント
+  (set-face-font 'default "Myrica M-13:antialias=standard")
+  ;(set-face-font 'default "Migu 1M-13:antialias=standard")
+  ;; プロポーショナル フォント
+  (set-face-font 'variable-pitch "Myrica M-13:antialias=standard")
+  ;(set-face-font 'variable-pitch "Migu 1M-13:antialias=standard")
+  ;; 等幅フォント
+  (set-face-font 'fixed-pitch "Myrica M-13:antialias=standard")
+  ;(set-face-font 'fixed-pitch "Migu 1M-13:antialias=standard")
+  ;; ツールチップ表示フォント
+  (set-face-font 'tooltip "Myrica M-10:antialias=standard")
+  ;(set-face-font 'tooltip "Migu 1M-10:antialias=standard")
+)
 
-;; プロポーショナル フォント
-(set-face-font 'variable-pitch "MyricaM M-13:antialias=standard")
-;(set-face-font 'variable-pitch "Migu 1M-13:antialias=standard")
-
-;; 等幅フォント
-(set-face-font 'fixed-pitch "MyricaM M-13:antialias=standard")
-;(set-face-font 'fixed-pitch "Migu 1M-13:antialias=standard")
-
-;; ツールチップ表示フォント
-(set-face-font 'tooltip "MyricaM M-10:antialias=standard")
-;(set-face-font 'tooltip "Migu 1M-10:antialias=standard")
+(when (eq system-type 'gnu/linux) 
+  ;; デフォルト フォント
+  (set-face-font 'default "MyricaM M-13:antialias=standard")
+  ;; プロポーショナル フォント
+  (set-face-font 'variable-pitch "MyricaM M-13:antialias=standard")
+  ;; 等幅フォント
+  (set-face-font 'fixed-pitch "MyricaM M-13:antialias=standard")
+  ;; ツールチップ表示フォント
+  (set-face-font 'tooltip "MyricaM M-10:antialias=standard")
+)
 
 ;;; fontset
 
@@ -253,7 +261,7 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ screen - minibuffer                                           ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-(if (eq system-type 'windows-nt) (
+(when (eq system-type 'windows-nt) 
   ;; minibufferのアクティブ時、IMEを無効化
   (add-hook 'minibuffer-setup-hook
           (lambda ()
@@ -261,7 +269,7 @@
   (wrap-function-to-control-ime 'y-or-n-p nil nil)
   (wrap-function-to-control-ime 'map-y-or-n-p nil nil)
   (wrap-function-to-control-ime 'read-char nil nil)
-))
+)
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ screen - cursor                                               ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
