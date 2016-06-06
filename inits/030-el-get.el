@@ -45,6 +45,7 @@
 (el-get-bundle php-mode)
 (el-get-bundle elpa:csharp-mode)
 (el-get-bundle vbnet-mode)
+(el-get-bundle markdown-mode)
 
 ;region選択
 (el-get-bundle expand-region)

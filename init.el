@@ -119,13 +119,13 @@
 
 (when (eq system-type 'windows-nt) 
   ;; デフォルト フォント
-  (set-face-font 'default "Myrica M-13:antialias=standard")
+  (set-face-font 'default "Myrica M-12:antialias=standard")
   ;(set-face-font 'default "Migu 1M-13:antialias=standard")
   ;; プロポーショナル フォント
-  (set-face-font 'variable-pitch "Myrica M-13:antialias=standard")
+  (set-face-font 'variable-pitch "Myrica M-12:antialias=standard")
   ;(set-face-font 'variable-pitch "Migu 1M-13:antialias=standard")
   ;; 等幅フォント
-  (set-face-font 'fixed-pitch "Myrica M-13:antialias=standard")
+  (set-face-font 'fixed-pitch "Myrica M-12:antialias=standard")
   ;(set-face-font 'fixed-pitch "Migu 1M-13:antialias=standard")
   ;; ツールチップ表示フォント
   (set-face-font 'tooltip "Myrica M-10:antialias=standard")
