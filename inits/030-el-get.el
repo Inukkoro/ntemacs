@@ -1,54 +1,58 @@
 ;; ------------------------------------------------------------------------
 ;; @ el-get
 
-;(require 'cl)
-;(require 'package)
+;;(require 'cl)
+;;(require 'package)
 
-; gnupack標準
+;; gnupack標準
 (el-get-bundle hiwin)
 (el-get-bundle migemo)
 (el-get-bundle tabbar)
 
 
-; テーマ
-;(el-get-bundle molokai-theme)
-;(el-get-bundle zenburn-theme)
+;; テーマ
+;;(el-get-bundle molokai-theme)
+;;(el-get-bundle zenburn-theme)
 
-; use-package
+;; use-package
 (el-get-bundle! use-package)
 
-; helm
+;; helm
 (el-get-bundle helm)
 (el-get-bundle helm-gtags)
 (el-get-bundle helm-projectile)
 (el-get-bundle helm-ag)
+(el-get-bundle helm-swoop)
 
-;dired
+;; search
+(el-get-bundle anzu)
+
+;;dired
 (el-get-bundle dired+)
 (el-get-bundle dired-k)
 
-;undo
+;;undo
 (el-get-bundle undo-tree)
 
-;git
+;;git
 (el-get-bundle smartrep)
 (el-get-bundle git-gutter)
-;(el-get-bundle magit) ; el-getでうまく行かないためpackageで取得
+;;(el-get-bundle magit) ; el-getでうまく行かないためpackageで取得
 
-;which-key
+;;which-key
 (el-get-bundle which-key)
 
-;履歴など
+;;履歴など
 (el-get-bundle recentf-ext)
 (el-get-bundle session)
 
-;major-mode
+;;major-mode
 (el-get-bundle php-mode)
 (el-get-bundle elpa:csharp-mode)
 (el-get-bundle vbnet-mode)
 (el-get-bundle markdown-mode)
 
-;region選択
+;;region選択
 (el-get-bundle expand-region)
 (el-get-bundle highlight-symbol)
 
