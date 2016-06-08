@@ -21,6 +21,7 @@
 (el-get-bundle helm)
 (el-get-bundle helm-gtags)
 (el-get-bundle helm-projectile)
+(el-get-bundle helm-ag)
 
 ;dired
 (el-get-bundle dired+)
@@ -50,3 +51,4 @@
 ;region選択
 (el-get-bundle expand-region)
 (el-get-bundle highlight-symbol)
+
