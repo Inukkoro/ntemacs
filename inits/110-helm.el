@@ -163,6 +163,7 @@
     (setq helm-swoop-use-fuzzy-match nil)
 
     ;; If you would like to use migemo, enable helm's migemo feature
-    (helm-migemo-mode 0)
+    ;;(helm-migemo-mode 1)
+
     )
   )
