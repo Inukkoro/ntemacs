@@ -12,7 +12,8 @@
 
 ;; テーマ
 ;;(el-get-bundle molokai-theme)
-;;(el-get-bundle zenburn-theme) ; el-getだとうまくいかない・・・。
+(el-get-bundle bbatsov/zenburn-emacs :name zenburn-theme
+  (add-to-list 'custom-theme-load-path default-directory)) ; themeは設定が必要？？
 
 ;; use-package
 (el-get-bundle! use-package)
@@ -48,7 +49,7 @@
 
 ;; major-mode
 (el-get-bundle php-mode)
-(el-get-bundle csharp-mode)
+(el-get-bundle josteink/csharp-mode) ; git-svnからDL使用とするため、githubに変更
 (el-get-bundle vbnet-mode)
 (el-get-bundle markdown-mode)
 (el-get-bundle coffee-mode)
@@ -58,7 +59,7 @@
 (el-get-bundle highlight-symbol)
 
 ;; evil
-(el-get-bundle elpa:evil) ; hgがNTEmacsでは動かない？のでelpaから取得
+(el-get-bundle emacsmirror:evil) ; hgがNTEmacsでは動かない？のでemacsmirrorから取得
 
 
 
