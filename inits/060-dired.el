@@ -30,3 +30,9 @@
 (add-hook 'dired-initial-position-hook 'dired-k)
 
 (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)
+
+;; カーソル下にあるファイルやURLを適切に開いてくれる
+(ffap-bindings)
+
+;; ウィンドウ分割の際にもう片方のバッファにコピーする
+(setq dired-dwim-target t)

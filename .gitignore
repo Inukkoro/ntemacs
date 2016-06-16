@@ -8,6 +8,9 @@ elpa/
 # el-getフォルダを除外
 el-get/
 
+# eshellフォルダを除外
+eshell/
+
 # fontsを除外
 #inits/999-fonts.el
 

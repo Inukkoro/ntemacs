@@ -11,7 +11,7 @@
     ;; ここに使っているパッケージを書く。
     ; el-getでうまく行かないもの
     ;git
-    magit
+    ;magit
 
     ;theme
     zenburn-theme

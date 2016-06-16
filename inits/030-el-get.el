@@ -27,32 +27,38 @@
 ;; search
 (el-get-bundle anzu)
 
-;;dired
+;; dired
 (el-get-bundle dired+)
 (el-get-bundle dired-k)
 
-;;undo
+;; undo
 (el-get-bundle undo-tree)
 
-;;git
+;; git
 (el-get-bundle smartrep)
 (el-get-bundle git-gutter)
-;;(el-get-bundle magit) ; el-getでうまく行かないためpackageで取得
+(el-get-bundle magit :info nil) ; el-getでうまく行かないためpackageで取得
 
-;;which-key
+;; which-key
 (el-get-bundle which-key)
 
-;;履歴など
+;; 履歴など
 (el-get-bundle recentf-ext)
 (el-get-bundle session)
 
-;;major-mode
+;; major-mode
 (el-get-bundle php-mode)
-(el-get-bundle elpa:csharp-mode)
+(el-get-bundle csharp-mode)
 (el-get-bundle vbnet-mode)
 (el-get-bundle markdown-mode)
+(el-get-bundle coffee-mode)
 
-;;region選択
+;; region選択
 (el-get-bundle expand-region)
 (el-get-bundle highlight-symbol)
+
+;; evil
+(el-get-bundle elpa:evil) ; hgがNTEmacsでは動かない？のでelpaから取得
+
+
 
