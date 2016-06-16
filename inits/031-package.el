@@ -9,11 +9,11 @@
 (defvar installing-package-list
   '(
     ;; ここに使っているパッケージを書く。
-    ; el-getでうまく行かないもの
-    ;git
+    ;; el-getでうまく行かないもの
+    ;; git
     ;magit
 
-    ;theme
+    ;; theme
     zenburn-theme
 
     ))

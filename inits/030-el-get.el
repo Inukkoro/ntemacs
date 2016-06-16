@@ -12,7 +12,7 @@
 
 ;; テーマ
 ;;(el-get-bundle molokai-theme)
-;;(el-get-bundle zenburn-theme)
+;;(el-get-bundle zenburn-theme) ; el-getだとうまくいかない・・・。
 
 ;; use-package
 (el-get-bundle! use-package)
@@ -37,7 +37,7 @@
 ;; git
 (el-get-bundle smartrep)
 (el-get-bundle git-gutter)
-(el-get-bundle magit :info nil) ; el-getでうまく行かないためpackageで取得
+(el-get-bundle magit :info nil) ; :info nilでTexinfoがなくてもインストールできる
 
 ;; which-key
 (el-get-bundle which-key)
